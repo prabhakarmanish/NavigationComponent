@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signUpFrag">
+
+    <fragment
+        android:id="@+id/welcomeFrag"
+        android:name="prabhakar.manish.navigationcomponent.Fragment.WelcomeFrag"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" />
+    <fragment
+        android:id="@+id/signUpFrag"
+        android:name="prabhakar.manish.navigationcomponent.Fragment.SignUpFrag"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFrag_to_welcomeFrag"
+            app:destination="@id/welcomeFrag" />
+        <action
+            android:id="@+id/action_signUpFrag_to_loginFrag"
+            app:destination="@id/loginFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFrag"
+        android:name="prabhakar.manish.navigationcomponent.Fragment.LoginFrag"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+</navigation>
